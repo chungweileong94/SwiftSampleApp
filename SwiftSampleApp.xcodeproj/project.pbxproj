@@ -11,6 +11,8 @@
 		3906206A2A51A70C006FFEC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390620692A51A70C006FFEC4 /* ContentView.swift */; };
 		3906206C2A51A70D006FFEC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3906206B2A51A70D006FFEC4 /* Assets.xcassets */; };
 		390620702A51A70D006FFEC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3906206F2A51A70D006FFEC4 /* Preview Assets.xcassets */; };
+		39D235622A51B476005E4E15 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D235612A51B476005E4E15 /* DataModel.swift */; };
+		39D235652A51BCA0005E4E15 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D235642A51BCA0005E4E15 /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		3906206B2A51A70D006FFEC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3906206D2A51A70D006FFEC4 /* SwiftSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftSampleApp.entitlements; sourceTree = "<group>"; };
 		3906206F2A51A70D006FFEC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		39D235612A51B476005E4E15 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		39D235642A51BCA0005E4E15 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 		390620662A51A70C006FFEC4 /* SwiftSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				39D235632A51BC92005E4E15 /* Views */,
+				39D235602A51B461005E4E15 /* Models */,
 				390620672A51A70C006FFEC4 /* SwiftSampleAppApp.swift */,
 				390620692A51A70C006FFEC4 /* ContentView.swift */,
 				3906206B2A51A70D006FFEC4 /* Assets.xcassets */,
@@ -67,6 +73,22 @@
 				3906206F2A51A70D006FFEC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		39D235602A51B461005E4E15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39D235612A51B476005E4E15 /* DataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		39D235632A51BC92005E4E15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39D235642A51BCA0005E4E15 /* RecipeDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +163,8 @@
 			files = (
 				3906206A2A51A70C006FFEC4 /* ContentView.swift in Sources */,
 				390620682A51A70C006FFEC4 /* SwiftSampleAppApp.swift in Sources */,
+				39D235622A51B476005E4E15 /* DataModel.swift in Sources */,
+				39D235652A51BCA0005E4E15 /* RecipeDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +316,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcw.SwiftSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -330,10 +357,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcw.SwiftSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};

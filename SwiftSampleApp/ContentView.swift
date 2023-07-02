@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var dataModel = DataModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List(Category.allCases) { category in
+                Section(category.localizedName) {
+                    ForEach(dataModel.recipes(in: category)) { recipe in
+                        NavigationLink(recipe.name, value: recipe)
+                    }
+                }
+            }
+            .navigationTitle("Categories")
+            .navigationDestination(for: Recipe.self) { recipe in
+                RecipeDetailView(recipe: recipe)
+            }
         }
-        .padding()
+        .environmentObject(dataModel)
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
